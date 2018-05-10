@@ -12,3 +12,28 @@
   font-size: 18px;
 }
 
+html,body{
+  height: 100%;
+  width: 100%;
+  
+}
+a:link,
+a:visited,
+a:hover,
+a:active{
+
+}
+/*.lt_aside*/
+.lt_aside{
+  height: 100% ;
+  width: 180px;
+  background-color: #222D32;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.lt_aside .brand{
+  width: 180px;
+  height: 50px;
+  
+}
