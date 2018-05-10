@@ -8,27 +8,45 @@
   <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="./css/common.css">
 </head>
-<body class="bg_color">
+<body>
 
-<div class="it_aside">
+<!--乐淘侧边栏-->
+<div class="lt_aside">
   <div class="brand">
     <a href="#">黑马20期</a>
   </div>
   
-  
   <!--头像-->
   <div class="user">
-    <img src="./images/default.jpg" alt="">
+    <img src="./images/nanshen.JPG" alt="">
     <p>超级管理员</p>
   </div>
   
   <!--导航-->
   <div class="nav">
     <ul>
-      <li><a href="#">
-        <i class="glyphicon glyphicon-user"></i>
-        <span>用户管理</span>
-      </a></li>
+      <li>
+        <a href="user.html">
+          <i class="glyphicon glyphicon-user"></i>
+          <span>用户管理</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="glyphicon glyphicon-list"></i>
+          <span>分类管理</span>
+        </a>
+        <div class="child" style="display: none;">
+          <a href="first.html" class="">一级分类</a>
+          <a href="second.html" class="">二级分类</a>
+        </div>
+      </li>
+      <li>
+        <a href="product.html">
+          <i class="glyphicon glyphicon-tags"></i>
+          <span>商品管理</span>
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -37,5 +55,6 @@
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./js/common.js   "></script>
 </body>
 </html>
