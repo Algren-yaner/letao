@@ -5,6 +5,9 @@
 .mt_150 {
   margin-top: 150px;
 }
+.mb_20 {
+  margin-bottom: 20px;
+}
 
 .panel-title {
   height: 40px;
@@ -15,9 +18,8 @@
 html, body {
   height: 100%;
   width: 100%;
-  
 }
-
+/* lvha */
 a:link,
 a:visited,
 a:hover,
@@ -25,23 +27,33 @@ a:active {
   text-decoration: none;
 }
 
-.red {
-  color: #A94442;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
-
-ul, li {
+ul {
   list-style: none;
 }
 
-/*.lt_aside 开始*/
+.red {
+  color: #A94442;
+}
+
+/* 希望让所有的表格内容, 都水平垂直居中 */
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  /* 设置表格内容垂直居中 */
+  vertical-align: middle;
+}
+
+
+
+
+/* .lt_aside 开始 */
 .lt_aside {
-  height: 100%;
   width: 180px;
+  height: 100%;
   background-color: #222D32;
   position: fixed;
   left: 0;
@@ -49,10 +61,10 @@ ul, li {
   z-index: 999;
   transition: all 1s;
 }
-
 .lt_aside.hidemenu {
   left: -180px;
 }
+
 
 .lt_aside .brand {
   width: 180px;
@@ -60,9 +72,8 @@ ul, li {
   line-height: 50px;
   text-align: center;
   font-size: 24px;
-  background-color: #367fa9;
+  background-color: #367FA9;
 }
-
 .lt_aside .brand a {
   color: #fff;
 }
@@ -71,7 +82,6 @@ ul, li {
   height: 180px;
   padding-top: 30px;
 }
-
 .lt_aside .user img {
   width: 80px;
   height: 80px;
@@ -79,7 +89,6 @@ ul, li {
   margin: 0 auto;
   border-radius: 50%;
 }
-
 .lt_aside .user p {
   text-align: center;
   color: #fff;
@@ -96,47 +105,42 @@ ul, li {
   color: #fff;
   border-left: 3px solid transparent;
 }
-
 .lt_aside .nav li a.current {
   background-color: #1D1F21;
   border-left: 3px solid #006699;
 }
 
+.lt_aside .nav li i {
+  margin-right: 5px;
+}
 .lt_aside .nav .child a {
   padding-left: 60px;
 }
+/* .lt_aside 结束 */
 
-.lt_aside .nav li i {
-  margin: 5px;
-}
 
-/*lt_aside 结束*/
-
-/*lt_main 开始*/
+/* lt_main 开始 */
 .lt_main {
   min-height: 1000px;
-  width: 100%;
   padding-left: 180px;
   padding-top: 50px;
   transition: all 1s;
 }
-.lt_main .hidemenu {
+.lt_main.hidemenu {
   padding-left: 0px;
 }
 
 .lt_topbar {
   height: 50px;
   width: 100%;
-  line-height: 50px;
   background-color: #3C8DBC;
   position: fixed;
   left: 0;
   top: 0;
   padding-left: 180px;
   transition: all 1s;
-  z-index: 666;
 }
-.lt_topbar .hidemenu {
+.lt_topbar.hidemenu {
   padding-left: 0px;
 }
 
@@ -148,15 +152,15 @@ ul, li {
   font-size: 20px;
   text-align: center;
 }
-
 .lt_main .breadcrumb {
   margin-top: 20px;
 }
 
 .lt_content .echarts_1,
-.lt_content .echarts_2{
+.lt_content .echarts_2 {
   width: 48%;
   height: 400px;
 }
 
-/*lt_main 结束*/
+
+/* lt_main 结束 */

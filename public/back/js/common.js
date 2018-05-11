@@ -2,6 +2,32 @@
  * Created by Jepson on 2018/5/9.
  */
 
+//  5-登录拦截分析 现在注意:我们是前后端分离的,前端并不知道当前用户有没有登录
+//  不知道,问呗,需要一进入页面,就调用接口,来判断当前用户有没有登录
+// (1) 如果没有登录,不需要下面的操作了,直接拦截到登录页面即可
+// (2) 如果当前用户登录, 啥都不用干,让用户继续访问即可
+// (3)我们需要将不需要用户登录的页面(登录页,进行排除)
+if(location.href.indexOf("login.html")===-1){
+//  如果当前地址栏中没有login.html,需要判断当前用户状态
+  $.ajax({
+    type:"get",
+    url:"/employee/checkRootLogin",
+    dataType:"json",
+    success:function(info){
+      console.log(info);
+      if(info.error===400){
+        location.href="login.html"
+      }
+    }
+  })
+}
+
+
+
+
+
+
+
 //禁用进度条
 NProgress.configure({showSpinner: false});
 
@@ -42,5 +68,30 @@ $(function () {
     //  当菜单隐藏时,lt_tobar,lt_main都不需要padding-left了
     $('.lt_tobar').toggleClass("hidemenu");
     $('.lt_main').toggleClass("hidemenu");
+  });
+
+//  3-点击icon_logout 应该显示模态框
+  $('.icon_logout').click(function () {
+    
+    //通过id找到模态框,通过modal("show")显示模态框
+    $('#logoutModal').modal("show");
+  });
+
+//  4-点击模态框退出按钮,实现退出
+  $('#logoutBtn').click(function () {
+    //  退出
+    $.ajax({
+      type: "get",
+      url: "/employee/employeeLogout",
+      datatype: "json",
+      success: function (info) {
+        console.log(info);
+        if (info.success) {
+          //退出成功跳转登录页
+          location.href = "login.html";
+        }
+      }
+    })
   })
+  
 })
