@@ -26,3 +26,21 @@ $(document).ajaxStop(function () {
     NProgress.done();
   }, 500);
 });
+
+
+$(function () {
+
+//1-公共的二级菜单切换功能
+  $('.category').click(function () {
+    
+    $('.lt_aside .child').stop().slideToggle();
+  });
+
+//  2-点击菜单按钮,进行切换菜单
+  $('.icon_menu').click(function () {
+    $('.lt_aside').toggleClass("hidemenu");
+    //  当菜单隐藏时,lt_tobar,lt_main都不需要padding-left了
+    $('.lt_tobar').toggleClass("hidemenu");
+    $('.lt_main').toggleClass("hidemenu");
+  })
+})

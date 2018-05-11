@@ -47,6 +47,11 @@ ul, li {
   left: 0;
   top: 0;
   z-index: 999;
+  transition: all 1s;
+}
+
+.lt_aside.hidemenu {
+  left: -180px;
 }
 
 .lt_aside .brand {
@@ -116,6 +121,9 @@ ul, li {
   padding-top: 50px;
   transition: all 1s;
 }
+.lt_main .hidemenu {
+  padding-left: 0px;
+}
 
 .lt_topbar {
   height: 50px;
@@ -129,6 +137,9 @@ ul, li {
   transition: all 1s;
   z-index: 666;
 }
+.lt_topbar .hidemenu {
+  padding-left: 0px;
+}
 
 .lt_topbar a {
   width: 50px;
@@ -138,7 +149,8 @@ ul, li {
   font-size: 20px;
   text-align: center;
 }
-.lt_main .breadcrumb{
+
+.lt_main .breadcrumb {
   margin-top: 20px;
 }
 
