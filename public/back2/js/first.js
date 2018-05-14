@@ -19,7 +19,7 @@ $(function() {
       url: "/category/queryTopCategoryPaging",
       data: {
         page: currentPage,
-        pageSize: pageSize
+        pageSize: pageSize,
       },
       success: function( info ) {
         console.log( info );
